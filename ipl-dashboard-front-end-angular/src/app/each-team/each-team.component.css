@@ -1,0 +1,76 @@
+.example-card {
+    margin: 2%;
+
+  }
+
+  .team-display{
+    margin: 20px;
+    height: 30%;
+    width: 920px;
+
+  }
+  
+  .example-header-image {
+    background-image: url('https://material.angular.io/assets/img/examples/shiba1.jpg');
+    background-size: cover;
+  }
+
+  .filler {
+    flex: 1 1 auto;
+    width: 100%;
+ }
+ .gap {
+    margin-right: 10px;
+ }
+
+ .recent-match{
+   margin: 5%;
+   margin-right: 10%;
+   display: flex;
+   flex-wrap: wrap;
+ }
+ .each-rec-match{
+   margin-right:5% ;
+   
+ }
+ .matchcard{
+  background-color: white;
+  max-width: 400px;
+  margin-bottom: 10%;
+
+
+  color: black;
+
+
+ }
+
+ .matchcardloose{
+  background-color: white;
+  border-left: 4px solid;
+  border-color:red;
+  color: black;
+
+
+ }
+
+ .team-name
+ {
+   font-size: 40px;
+   font-weight: bolder;
+   word-spacing: 5px;
+   letter-spacing: 2px;
+ }
+
+ .main-team-card{
+  background-color: white;
+  color: black;
+  font-style: inherit;
+  
+ }
+
+ .match-card-tags{
+   font-weight: bold;
+   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+
+ }
+

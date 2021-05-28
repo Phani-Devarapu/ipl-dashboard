@@ -1,0 +1,43 @@
+<mat-toolbar>
+
+  <span>IPL Dash Board</span>
+  <span class="example-spacer"></span>
+  <button mat-icon-button class="example-icon favorite-icon" aria-label="Example icon-button with heart icon">
+    <mat-icon>favorite</mat-icon>
+  </button>
+  <button mat-icon-button class="example-icon" aria-label="Example icon-button with share icon">
+    <mat-icon>share</mat-icon>
+  </button>
+</mat-toolbar>
+
+
+<div style="display: flex;  flex-wrap: wrap;">
+  <div  *ngFor="let team of TeamsData">
+    <mat-card class="example-card"  style="flex: 1 1 auto;">
+      <mat-card-header>
+        <div mat-card-avatar class="example-header-image"></div>
+        <mat-card-title>
+          <a>{{team.teamName}}</a>
+        </mat-card-title>
+        <mat-card-subtitle>Dog Breed</mat-card-subtitle>
+      </mat-card-header>
+      <div >
+        <img mat-card-image src="{{team.teamPic}}" alt="Photo of a Shiba Inu">
+      </div>
+     
+      <mat-card-content>
+        Total Matches : {{team.totalMatches}}
+        Total Wins : {{team.totalWins}}
+      </mat-card-content>
+      <mat-card-actions>
+        <button mat-button [routerLink]="['/eachTeam',team.teamName]" >LIKE</button>
+        <button mat-button>SHARE</button>
+      </mat-card-actions>
+    </mat-card>
+
+
+  </div>
+   
+    
+  
+</div>

@@ -1,0 +1,71 @@
+<mat-toolbar>
+
+  <span>IPL Dash Board</span>
+  <span class="example-spacer"></span>
+  <button mat-icon-button class="example-icon favorite-icon" aria-label="Example icon-button with heart icon">
+    <mat-icon>favorite</mat-icon>
+  </button>
+  <button mat-icon-button class="example-icon" aria-label="Example icon-button with share icon">
+    <mat-icon>share</mat-icon>
+  </button>
+</mat-toolbar>
+
+
+
+<div class="team-display">
+  <mat-card class="main-team-card">
+    <div class="team-name">
+      {{teamData.teamName}}
+    </div>
+    <div >
+        <div style="margin: 20px;">
+          <span class="match-card-tags">Total Wins: </span>
+          <span>{{teamData.totalWins}}</span>
+        </div>
+        <div style="margin: 20px;">
+          <span class="match-card-tags">Total Matches : </span>
+          <span>{{teamData.totalMatches}}</span>
+        </div>
+
+    </div>
+    <div>
+      <mat-card style="width: 250px; margin-left: 70%; margin-top: -160px; background-color: white;">
+       <div >
+        <img  mat-card-image src="{{teamPicLogo}}" alt="{{name}} Logo" >
+       </div>
+      
+      </mat-card>
+    </div>
+  </mat-card> 
+  
+<div style="margin: 8px;">
+  <p style="font-size: 18px;margin: 10px;">Recent Matches</p>
+</div>
+
+</div>
+
+<div class="recent-match">
+  <div  class="each-rec-match"    *ngFor="let match of recentMatches">
+    <mat-card class="matchcard"  [ngStyle]="{ 'border-left': '10px solid','border-color':color }">
+     
+      <div style="margin: 10px;">
+        <span class="match-card-tags">Match Venue : </span>
+        <span>{{match.venue}}</span>
+      </div>
+      <div style="margin: 10px;">
+        <span class="match-card-tags">Player of the Match : </span>
+        <span> {{match.playerOfMatch}}</span>
+      </div>
+      <div style="margin: 10px;">
+        <span class="match-card-tags">Match Winner : </span>
+        <span> {{match.winner}}</span>
+      </div>
+      <div style="margin: 10px;">
+        <span class="match-card-tags">Match First Innings : </span>
+        <span> {{match.firstInnings}}</span>
+      </div>
+
+    </mat-card>
+  </div>
+
+</div>
